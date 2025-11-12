@@ -1,0 +1,18 @@
+@import './base.css';
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #ffffff; /* Pure white background */
+  color: #1b1b1f; /* Dark text for readability */
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding-top: 12px;
+}
