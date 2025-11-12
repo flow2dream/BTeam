@@ -1,8 +1,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
+import MarkdownEditor from './pages/MarkdownEditor.vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 
 const basePath = ref('')
+const currentView = ref('explorer') // 'explorer' | 'md'
 const currentPath = ref('')
 const items = ref([])
 const loading = ref(false)
@@ -327,7 +329,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <el-container style="height: 100%; width: 100%;">
+  <el-container v-if="currentView === 'explorer'" style="height: 100%; width: 100%;">
     <el-header class="toolbar">
       <div class="toolbar-left">
         <el-dropdown split-button type="success" @click="createFolder">
@@ -340,6 +342,7 @@ onUnmounted(() => {
         </el-dropdown>
       </div>
       <div class="toolbar-right">
+        <el-button @click="currentView = 'md'">Markdown编辑器</el-button>
         <el-button type="primary" @click="goUp">返回上一级</el-button>
         <el-button @click="goRoot">回到根目录</el-button>
       </div>
@@ -428,6 +431,7 @@ onUnmounted(() => {
       </el-dialog>
     </el-main>
   </el-container>
+  <MarkdownEditor v-else @back="currentView = 'explorer'" />
 </template>
 
 <style scoped>

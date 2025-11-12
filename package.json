@@ -20,7 +20,19 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
     "@electron-toolkit/utils": "^4.0.0",
-    "element-plus": "^2.11.7"
+    "element-plus": "^2.11.7",
+    "highlight.js": "^11.11.1",
+    "katex": "^0.16.25",
+    "markdown-it": "^14.1.0",
+    "markdown-it-deflist": "^3.0.0",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "markdown-it-texmath": "^1.0.0"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^2.1.0",
